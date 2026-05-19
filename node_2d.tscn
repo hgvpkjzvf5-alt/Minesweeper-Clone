@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bmqjnd6y6jfmu"]
+
+[ext_resource type="Script" uid="uid://cc057gin2tqcv" path="res://addons/regular_polygon2d_node/RegularPolygon2D.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://clg5xscj8jm5f" path="res://icon.svg" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=1048714465]
+
+[node name="RegularPolygon2D" type="Node2D" parent="." unique_id=764489078]
+scale = Vector2(1, 1.25)
+script = ExtResource("1_0e48y")
+centered = true
+num_sides = 4
+size = 10000.0
+polygon_color = Color(0.7904938, 0.90448356, 0.99237126, 1)
+border_size = 2.885
+polygon_rotation = 45.0
+metadata/_custom_type_script = "uid://cc057gin2tqcv"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1433923401]
+position = Vector2(-618.9998, 588.99994)
+scale = Vector2(11.545, 11.545)
+texture = ExtResource("1_wtcfe")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=204373712]
+zoom = Vector2(0.065, 0.065)
