@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dx11f3pmtd2y6"]
+
+[ext_resource type="Script" uid="uid://y2jrastnlpw6" path="res://innards/cell.gd" id="1_gwrgs"]
+[ext_resource type="Script" uid="uid://cc057gin2tqcv" path="res://addons/regular_polygon2d_node/RegularPolygon2D.gd" id="1_yh0nt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwrgs"]
+size = Vector2(353, 348)
+
+[node name="Cell" type="Node2D" unique_id=801585245]
+script = ExtResource("1_gwrgs")
+
+[node name="RegularPolygon2D" type="Node2D" parent="." unique_id=54774046]
+script = ExtResource("1_yh0nt")
+centered = true
+num_sides = 4
+size = 500.0
+polygon_rotation = 45.0
+metadata/_custom_type_script = "uid://cc057gin2tqcv"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2143912893]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1372150643]
+position = Vector2(-1.5, -1)
+shape = SubResource("RectangleShape2D_gwrgs")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
